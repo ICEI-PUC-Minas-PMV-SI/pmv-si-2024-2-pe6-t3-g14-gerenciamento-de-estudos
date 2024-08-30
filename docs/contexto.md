@@ -178,6 +178,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
 
+![WhatsApp Image 2024-08-29 at 21 33 40](https://github.com/user-attachments/assets/26e57d1b-cd54-47ac-a805-acc894a2d84c)
 
 ## Tecnologias Utilizadas
 
