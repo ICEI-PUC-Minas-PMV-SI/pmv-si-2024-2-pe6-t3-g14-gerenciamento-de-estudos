@@ -57,6 +57,12 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |------|-----------------------------------------|----|
 |RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
 |RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-003| Cadastro de Usuário                     | ALTA |
+|RF-004| Login e Logout                          |ALTA |
+|RF-005| Recuperação de senha                    | MÉDIA |
+|RF-006| Permitir o cadastro de disciplinas      | ALTA |
+|RF-007| Permitir a marcação de tarefas como concluídas | MÉDIA |
+|RF-008| Disponibilidade mobile e Web            | ALTA |
 
 ### Requisitos não Funcionais
 
@@ -64,6 +70,10 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
+|RNF-003| A aplicação deve suportar o uso simultâneo de até 500 usuários | MÉDIA |
+|RNF-004| A aplicação deve garantir que somente usuários autênticados consigam acessar suas informações | ALTA |
+|RNF-005| A aplicação deve ser de fácil entendimento | MÉDIA |
+
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
 
@@ -88,6 +98,7 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
 |02| Não pode ser desenvolvido um módulo de backend        |
+
 
 Enumere as restrições à sua solução. Lembre-se de que as restrições geralmente limitam a solução candidata.
 
