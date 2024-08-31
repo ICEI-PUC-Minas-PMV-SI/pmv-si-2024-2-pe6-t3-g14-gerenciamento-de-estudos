@@ -1,15 +1,20 @@
 # Introdução
 
-Atualmente no cenário em que vivemos, onde estamos bombardeados por informações e redes sociais, um problema que vem cada vez mais se tornando comum é a falta de concentração e de organização. Muitos estudantes reclamam que não conseguem se organizar para estudar, ou mesmo se perdem entre tantos conteúdos e matérias que necessitam aprender.
-Diante das dificuldades enfrentadas por diversos estudantes em se organizar para estudar, desenvolvemos um sistema que permite que usuários que desejam melhorar seu desempenho acadêmico possam criar uma lista de tarefas, matérias além de um check list para acompanhamento de seu progresso, através do lançamento de notas e tarefas.
+No contexto atual, onde a abundância de informações e a constante presença das redes sociais impõem desafios diários à concentração e organização, muitos estudantes enfrentam dificuldades em gerenciar suas atividades acadêmicas de forma eficaz. O excesso de conteúdos e a quantidade de matérias podem facilmente levar à desorganização, prejudicando o desempenho e o aprendizado.
 
+Reconhecendo essas dificuldades, desenvolvemos um sistema inovador destinado a ajudar estudantes a aprimorarem sua organização e foco. Este sistema permite que os usuários criem listas de tarefas detalhadas, categorizem matérias e utilizem checklists para acompanhar seu progresso. Além disso, a plataforma oferece a funcionalidade de registro de notas e tarefas, possibilitando um monitoramento contínuo e detalhado do desempenho acadêmico.
+
+Nosso objetivo é proporcionar uma ferramenta intuitiva, que não apenas simplifique a gestão das atividades escolares, mas que também motive os estudantes a alcançar seus objetivos acadêmicos com maior eficiência. Este sistema foi projetado para atender às necessidades de estudantes que buscam superar as barreiras da desorganização e maximizar seu potencial de aprendizagem em um ambiente cada vez mais dinâmico e desafiador.
 
 Texto descritivo com a visão geral do projeto abordado. Inclui o contexto, o problema, os objetivos, a justificativa e o público-alvo do projeto.
 
 ## Problema
 
-Talvez um dos grandes males do século, seja a falta de atenção e organização em que vivemos hoje, o tempo inteiro somos bombardeados por informações e estímulos rápidos, que em vários casos criam um grande défict de atenção e organização para a realização de tarefas simples, como dedicar o tempo necessário para estudo, além de criar hábitos ruins comumente chamados como "preguiça". 
-Nossa aplicação tem em vista ser de uso pessoal e solucionar esse problema, pois é uma ferramenta poderosa para organização do dia a dia.
+Um dos grandes desafios do mundo moderno é a dificuldade crescente em manter a atenção e a organização em meio ao bombardeio constante de informações e estímulos rápidos. Vivemos em uma era onde a sobrecarga sensorial, promovida por dispositivos digitais e redes sociais, não apenas reduz nossa capacidade de foco, mas também contribui para um déficit significativo de atenção. Essa falta de concentração afeta a execução de tarefas simples, como dedicar o tempo necessário para o estudo, e pode ao longo do tempo, criar hábitos prejudiciais frequentemente rotulados como "preguiça" ou falta de motivação.
+
+Essa dispersão mental e a desorganização resultante não apenas prejudicam a produtividade, mas também afetam o bem-estar emocional, causando frustração, estresse e em alguns casos, comprometem o desempenho acadêmico e profissional. O acúmulo de tarefas não concluídas e a sensação constante de estar atrasado criam um ciclo vicioso de desmotivação e ansiedade.
+
+Diante desse cenário, vemos a necessidade de soluções que ajudem a reduzir os efeitos dessas distrações. É fundamental encontrar formas de promover um ambiente mais estruturado e focado, onde as atividades diárias podem ser realizadas de maneira eficiente, permitindo que as pessoas recuperem o controle sobre seu tempo e alcancem seus objetivos com mais clareza e determinação.
 
 
 Nesse momento você deve apresentar o problema que a sua aplicação deve  resolver. No entanto, não é a hora de comentar sobre a aplicação.
@@ -25,10 +30,22 @@ Nesse momento, o grupo pode optar por fazer uso  de ferramentas como Design Thin
 
 ## Objetivos
 
-Nosso foco principal é desenvolver um software que irá trazer uma alternativa a todos os estudantes para se organizarem melhor e obterem um melhor aproveitamento de seu tempo. Principalmente para aqueles que sofrem de défict de atenção e falta de organização e motivação.
-
+Nosso principal objetivo é desenvolver um software que ofereça uma solução eficaz para os estudantes que enfrentam dificuldades com a organização, o aproveitamento do tempo e a falta de motivação. O foco é criar uma ferramenta acessível que auxilie especialmente aqueles que sofrem com déficit de atenção, ajudando-os a alcançar um melhor desempenho acadêmico por meio de uma gestão eficiente de suas tarefas e horários.
 
 Aqui você deve descrever os objetivos do trabalho indicando que o objetivo geral é desenvolver um software para solucionar o problema apresentado acima. 
+
+Objetivos Específicos
+
+Facilitar a Criação e o Gerenciamento de Tarefas:
+
+Implementar funcionalidades que permitam aos usuários criar, categorizar e priorizar tarefas de forma intuitiva. O objetivo é fornecer uma maneira clara e eficiente de organizar as atividades acadêmicas.
+
+
+Monitorar o Desempenho e Progresso Acadêmico:
+
+Criar ferramentas que permitam aos estudantes acompanhar seu desempenho ao longo do tempo, através do registro de notas e da conclusão de tarefas. Essa funcionalidade visa proporcionar uma visão clara do progresso acadêmico, ajudando os usuários a identificar áreas que necessitam de mais atenção e a manter a motivação através de metas alcançadas.
+
+Com esses objetivos, buscamos não apenas oferecer uma solução tecnológica, mas também contribuir para o desenvolvimento de hábitos mais saudáveis e produtivos no dia a dia dos estudantes, auxiliando-os a superar os desafios da falta de organização e concentração.
 
 Apresente também alguns (pelo menos 2) objetivos específicos dependendo de onde você vai querer concentrar a sua prática investigativa, ou como você vai aprofundar no seu trabalho.
  
