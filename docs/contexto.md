@@ -113,11 +113,9 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
 |RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
 |RF-003| Cadastro de Usuário                     | ALTA |
-|RF-004| Login e Logout                          |ALTA |
-|RF-005| Recuperação de senha                    | MÉDIA |
-|RF-006| Permitir o cadastro de disciplinas      | ALTA |
-|RF-007| Permitir a marcação de tarefas como concluídas | MÉDIA |
-|RF-008| Disponibilidade mobile e Web            | ALTA |
+|RF-004| Cadastro de média para aprovação        | MÉDIA |
+|RF-005| Permitir o cadastro de disciplinas      | ALTA |
+|RF-006| Permitir a marcação de tarefas como concluídas | MÉDIA |
 
 ### Requisitos não Funcionais
 
@@ -127,7 +125,6 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
 |RNF-003| A aplicação deve suportar o uso simultâneo de até 500 usuários | MÉDIA |
 |RNF-004| A aplicação deve garantir que somente usuários autênticados consigam acessar suas informações | ALTA |
-|RNF-005| A aplicação deve ser de fácil entendimento | MÉDIA |
 
 
 Com base nas Histórias de Usuário, enumere os requisitos da sua solução. Classifique esses requisitos em dois grupos:
@@ -152,11 +149,9 @@ O projeto está restrito pelos itens apresentados na tabela a seguir.
 |ID| Restrição                                             |
 |--|-------------------------------------------------------|
 |01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |   <<<<
-|03| O sistema deve ser de alta compatibilidade com dispósitivos fixos e móveis |
-|04| Deve ser garantida a comformidade com a LGPD para proteção dos dados dos usuários |
-|05| O projeto deve ser desenvolvido com um orçamento limitado |
-|06| A aplicação deve ser intuitiva para estudantes de diferentes idades |
+|02| O sistema deve ser de alta compatibilidade com dispósitivos fixos e móveis |
+|03| Deve ser garantida a comformidade com a LGPD para proteção dos dados dos usuários |
+|04| O projeto deve ser desenvolvido com um orçamento limitado |
 
 
 
@@ -168,21 +163,42 @@ Enumere as restrições à sua solução. Lembre-se de que as restrições geral
 
 # Catálogo de Serviços
 
+- Lançamento de atividades: 
+O usuário poderá fazer o cadastro da atividade podendo apontar data de entrega, valor total da atividade.
+
+- Cadastro de Disciplinas:
+O usuário poderá cadastrar as disciplinas que estão sendo estudadas.
+
+- Cadastro de Usuário:
+O usuário poderá fazer um cadastro com suas informações pessoais e informações da sua escola/faculdade.
+
+- Relatórios de performance:
+O usuário poderá visualizar relatórios de desempenho nas atividades e desempenho geral.
+
+- Apontar média geral de aprovação:
+O usuário poderá setar a média que deve alcançar para ser aprovado.
+
 Cadastro de matérias: O estudante 
 
 Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
 
 # Arquitetura da Solução
 
+![arquitetura do sistema](https://github.com/user-attachments/assets/96fbb487-be6c-491c-8171-185ead9a397c)
+
+
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ![arq](https://github.com/user-attachments/assets/b9402e05-8445-47c3-9d47-f11696e38a3d)
 
-![WhatsApp Image 2024-08-29 at 21 33 40](https://github.com/user-attachments/assets/26e57d1b-cd54-47ac-a805-acc894a2d84c)
 
 ## Tecnologias Utilizadas
 
+
+Vamos utilizar o Visual Studio Code (VS Code) como IDE, e a linguagem de programação JavaScript para desenvolvimento no ambiente web. Para isso, faremos uso dos frameworks React e React Native, a fim de atender às necessidades tanto de aplicações web quanto mobile. Além disso, implementaremos o protocolo OAuth 2.0 para o cadastro de usuários. Por fim, criaremos uma API REST utilizando C# e MySQL como banco de dados, com o deploy sendo realizado na AWS
 Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+
+![tecnologias](https://github.com/user-attachments/assets/562cd59f-c70d-4789-b98b-df6d8609fd4f)
 
 Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
 
