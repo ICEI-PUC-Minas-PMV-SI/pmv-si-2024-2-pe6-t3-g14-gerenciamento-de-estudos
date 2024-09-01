@@ -6,7 +6,9 @@
 
 `SEMESTRE: 6º`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto em desenvolvimento é uma plataforma digital voltada a auxiliar estudantes a organizar suas rotinas de estudo de maneira eficiente. A ferramenta permite que os usuários gerenciem suas tarefas acadêmicas, acompanhem seu progresso e mantenham um controle claro de suas atividades, tudo em um único lugar. O objetivo é proporcionar uma solução prática que ajude estudantes a melhorar sua produtividade, especialmente aqueles que enfrentam dificuldades com desorganização e falta de foco.
+
+
 
 ## Integrantes
 
