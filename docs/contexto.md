@@ -36,7 +36,9 @@ Com esses objetivos, buscamos não apenas oferecer uma solução tecnológica, m
 
 ## Justificativa
 
-Tendo como visualização uma nova cultura através dos jovens que desenvolvem uma vida mais acelerada por conta do alto consumo de conteúdos da internet no dia a dia, oque acarreta em sintomas como desatenção, desorganização, falta de capacidade na gestão do próprio tempo por conta do imediatismo gerado. Entedemos a dor dos jovens, pois muitas vezes sentimos na pele a dificuldade para se organizar diante das atividades acadêmicas e acreditamos que nosso software tem grande importância pois vai ajudar esses jovens que passam por essas dificuldades e molda-los para serem mais produtivos e menos dependentes dessa cultura de vicío em telas. 
+Vivemos em uma era onde a cultura digital molda o comportamento de jovens, que estão cada vez mais imersos em um ritmo de vida acelerado, impulsionado pelo consumo constante de conteúdos online. Esse ambiente digital, embora repleto de informações e possibilidades, também traz consequências negativas, como a desatenção, a desorganização e a incapacidade de gerir o tempo de forma eficaz. O imediatismo promovido pelas redes sociais e outros meios digitais frequentemente leva os jovens a desenvolverem hábitos de procrastinação e dependência excessiva de dispositivos, dificultando a concentração em tarefas acadêmicas e a realização de metas a longo prazo.
+
+Entendemos profundamente essas dores, pois muitos de nós já enfrentaram as mesmas dificuldades de organização e foco diante das exigências acadêmicas. Por isso, acreditamos que o desenvolvimento de um software dedicado à melhoria da gestão do tempo e à organização é de extrema importância. Nosso objetivo é proporcionar uma ferramenta que não apenas auxilie os jovens a superar esses desafios, mas que também contribua para a formação de hábitos mais saudáveis e produtivos. Queremos ajudar a moldar uma geração que, embora conectada, seja capaz de utilizar a tecnologia de maneira equilibrada e consciente, reduzindo a dependência da cultura de vício em telas e promovendo um estilo de vida mais organizado e focado em resultados positivos.
 
 
 ## Público-Alvo
@@ -137,34 +139,43 @@ O usuário poderá visualizar relatórios de desempenho nas atividades e desempe
 - Apontar média geral de aprovação:
 O usuário poderá setar a média que deve alcançar para ser aprovado.
 
-Cadastro de matérias: O estudante 
-
-Descreva aqui todos os serviços que serão disponibilizados pelo seu projeto, detalhando suas características e funcionalidades.
 
 # Arquitetura da Solução
 
 ![arquitetura do sistema](https://github.com/user-attachments/assets/96fbb487-be6c-491c-8171-185ead9a397c)
 
+A arquitetura funciona da seguinte maneira:
+
+O cliente web ou mobile envia uma solicitação HTTP para a API, que está hospedada na AWS. A API, desenvolvida em C#, processa essa solicitação e acessa o banco de dados MySQL, também hospedado na AWS. Após a manipulação dos dados, a API responde ao cliente com os dados solicitados ou uma confirmação de operação, como criar, atualizar ou deletar dados.
+
+Essa estrutura assegura que todas as partes da solução, desde o front-end até o banco de dados, estejam integradas de forma eficiente e segura no ambiente de hospedagem da AWS.
 
 Definição de como o software é estruturado em termos dos componentes que fazem parte da solução e do ambiente de hospedagem da aplicação.
 
 ## Tecnologias Utilizadas
 
-
-Vamos utilizar o Visual Studio Code (VS Code) como IDE, e a linguagem de programação JavaScript para desenvolvimento no ambiente web. Para isso, faremos uso dos frameworks React e React Native, a fim de atender às necessidades tanto de aplicações web quanto mobile. Além disso, implementaremos o protocolo OAuth 2.0 para o cadastro de usuários. Por fim, criaremos uma API REST utilizando C# e MySQL como banco de dados, com o deploy sendo realizado na AWS
-Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
-
 ![tecnologias](https://github.com/user-attachments/assets/562cd59f-c70d-4789-b98b-df6d8609fd4f)
 
-Apresente também uma figura explicando como as tecnologias estão relacionadas ou como uma interação do usuário com o sistema vai ser conduzida, por onde ela passa até retornar uma resposta ao usuário.
+Vamos utilizar o Visual Studio Code (VS Code) como IDE, e a linguagem de programação JavaScript para desenvolvimento no ambiente web. Para isso, faremos uso dos frameworks React e React Native, a fim de atender às necessidades tanto de aplicações web quanto mobile. Além disso, implementaremos o protocolo OAuth 2.0 para o cadastro de usuários. Por fim, criaremos uma API REST utilizando C# e MySQL como banco de dados, com o deploy sendo realizado na AWS.
+Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
+
 
 ## Hospedagem
 
-Explique como a hospedagem e o lançamento da plataforma foi feita.
+Desenvolvimento Local:
 
-> **Links Úteis**:
->
-> - [Website com GitHub Pages](https://pages.github.com/)
-> - [Programação colaborativa com Repl.it](https://repl.it/)
-> - [Getting Started with Heroku](https://devcenter.heroku.com/start)
-> - [Publicando Seu Site No Heroku](http://pythonclub.com.br/publicando-seu-hello-world-no-heroku.html)
+Utilização do Visual Studio Code (VS Code) como IDE.
+Versionamento de código com Git.
+
+API REST: Hospedada usando AWS
+Banco de Dados MySQL
+Autenticação de Usuários: Implementação do OAuth 2.0
+Interface Web: Hospedada na AWS
+
+Lançamento:
+
+Monitoramento contínuo
+Escalabilidade
+Medidas de segurança implementadas.
+
+Esse processo garantiu um lançamento seguro e eficiente da plataforma.
