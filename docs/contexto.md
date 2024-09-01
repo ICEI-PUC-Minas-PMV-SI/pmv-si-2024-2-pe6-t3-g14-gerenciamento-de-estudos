@@ -156,7 +156,7 @@ Definição de como o software é estruturado em termos dos componentes que faze
 
 ![tecnologias](https://github.com/user-attachments/assets/562cd59f-c70d-4789-b98b-df6d8609fd4f)
 
-Vamos utilizar o Visual Studio Code (VS Code) como IDE, e a linguagem de programação JavaScript para desenvolvimento no ambiente web. Para isso, faremos uso dos frameworks React e React Native, a fim de atender às necessidades tanto de aplicações web quanto mobile. Além disso, implementaremos o protocolo OAuth 2.0 para o cadastro de usuários. Por fim, criaremos uma API REST utilizando C# e MySQL como banco de dados, com o deploy sendo realizado na AWS.
+Vamos utilizar o Visual Studio Code (VS Code) como IDE, e a linguagem de programação JavaScript para desenvolvimento no ambiente web. Para isso, faremos uso dos frameworks React e React Native, a fim de atender às necessidades tanto de aplicações web quanto mobile. Além disso, implementaremos o protocolo OAuth 2.0 para o cadastro de usuários. Por fim, criaremos uma API REST utilizando C#, entity framework e MySQL como banco de dados, com o deploy sendo realizado na AWS.
 Descreva aqui qual(is) tecnologias você vai usar para resolver o seu problema, ou seja, implementar a sua solução. Liste todas as tecnologias envolvidas, linguagens a serem utilizadas, serviços web, frameworks, bibliotecas, IDEs de desenvolvimento, e ferramentas.
 
 
