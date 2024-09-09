@@ -1,0 +1,6 @@
+@mf_api_gerenciamento_tarefa_HostAddress = http://localhost:5294
+
+GET {{mf_api_gerenciamento_tarefa_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
