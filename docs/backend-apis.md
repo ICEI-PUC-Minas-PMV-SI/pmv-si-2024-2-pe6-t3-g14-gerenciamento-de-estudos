@@ -1,11 +1,6 @@
 # APIs e Web Services
 
-O planejamento de uma aplicação de APIS Web é uma etapa fundamental para o sucesso do projeto. Ao planejar adequadamente, você pode evitar muitos problemas e garantir que a sua API seja segura, escalável e eficiente.
-
-Aqui estão algumas etapas importantes que devem ser consideradas no planejamento de uma aplicação de APIS Web.
-
-[Inclua uma breve descrição do projeto.]
-
+O projeto consiste na criação de uma API para o cadastro de usuário e a manutenção de suas disciplinas e notas, para isso executamos alguns passos descritos a seguir.
 
 Criação do Projeto Inicial: Nesta fase, estruturamos a aplicação e criamos os modelos principais que representam as entidades do sistema. Adicionamos também as primeiras validações necessárias para garantir a integridade dos dados.
 
@@ -16,10 +11,7 @@ Configuração e Testes de Banco de Dados: O banco de dados foi configurado em a
 
 ## Objetivos da API
 
-O primeiro passo é definir os objetivos da sua API. O que você espera alcançar com ela? Você quer que ela seja usada por clientes externos ou apenas por aplicações internas? Quais são os recursos que a API deve fornecer?
-
-[Inclua os objetivos da sua api.]
-O objetivo da API é fornecer é permitir aos usuários:
+O objetivo da API é fornecer e permitir aos usuários:
 
 Criar uma conta: A API deve permitir o registro de novos usuários, armazenando suas informações, como nome, email, e credenciais de acesso. Para autenticação.
 
@@ -32,8 +24,6 @@ Os principais recursos que a API fornecerá incluem:
 Cadastro e autenticação de usuários.
 Gerenciamento de disciplinas.
 Gerenciamento de notas.
-Essa API será desenvolvida com C# utilizando o Entity Framework e um banco de dados MySQL, com o deploy na AWS.
-
 
 ## Arquitetura
 
@@ -49,26 +39,26 @@ Essa API será desenvolvida com C# utilizando o Entity Framework e um banco de d
 
 ## Requisitos Funcionais
 
-[Liste os principais requisitos funcionais da aplicação.]
 |RF-001| Cadastro de Usuário                     | ALTA |
+
 |RF-002| Cadastro de Disciplina                  | ALTA |
+
 |RF-003| Criptografia de senhas                  | ALTA |
+
 |RF-004| Armazenamento de nota                   | ALTA |
 
 ## Requisitos Não Funcionais
 
-[Liste os principais requisitos não funcionais da aplicação, como desempenho, segurança, escalabilidade, etc.]
-
 |RNF-001|A API deve suportar até 100 usuários simultâneamente   | MÉDIO |
+
 |RNF-002|A API deve ser de fácil manutenção                     | ALTA |
+
 |RNF-003|As senhas dos usuários devem ser armazenadas com algoritmos de criptografia para garantir a segurança. | ALTA |
 
 
 
 
 ## Tecnologias Utilizadas
-
-Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
 
 As técnologias utilizadas em nossa API são a linguagem de programação C#, juntamente com o Entity Framework, além de utilizar pacotes como o BCrypt.Net.Next e também o pacote Microsoft.AspNetCore.Authentication.JWTBearer para realizar os processos de encriptação e segurança.
 
@@ -108,6 +98,20 @@ As técnologias utilizadas em nossa API são a linguagem de programação C#, ju
 ## Considerações de Segurança
 
 [Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+
+Para garantir a segurança da aplicação adotamos diversas medidas de proteção, focadas em autenticação, autorização.
+
+Autenticação:
+
+O sistema utiliza JWT (JSON Web Token), implementado com o pacote JWTBearer, para autenticação segura dos usuários. Ao fazer login, o usuário recebe um token que é utilizado nas solicitações subsequentes para identificar e autenticar o acesso. Esse token é assinado de forma criptografada, garantindo que não possa ser alterado sem a chave de assinatura.
+
+Autorização:
+
+A autorização é tratada por meio de políticas e claims definidas nos tokens JWT. Essas claims indicam o nível de acesso do usuário, garantindo que ele tenha permissões adequadas para acessar recursos específicos.
+
+Criptografia de Senhas:
+
+As senhas dos usuários são armazenadas de forma segura utilizando o pacote BCrypt.Net.Next.
 
 ## Implantação
 
