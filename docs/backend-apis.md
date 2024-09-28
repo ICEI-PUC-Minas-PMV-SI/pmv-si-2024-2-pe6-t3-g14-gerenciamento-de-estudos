@@ -50,15 +50,28 @@ Essa API será desenvolvida com C# utilizando o Entity Framework e um banco de d
 ## Requisitos Funcionais
 
 [Liste os principais requisitos funcionais da aplicação.]
--
+|RF-001| Cadastro de Usuário                     | ALTA |
+|RF-002| Cadastro de Disciplina                  | ALTA |
+|RF-003| Criptografia de senhas                  | ALTA |
+|RF-004| Armazenamento de nota                   | ALTA |
 
 ## Requisitos Não Funcionais
 
 [Liste os principais requisitos não funcionais da aplicação, como desempenho, segurança, escalabilidade, etc.]
 
+|RNF-001|A API deve suportar até 100 usuários simultâneamente   | MÉDIO |
+|RNF-002|A API deve ser de fácil manutenção                     | ALTA |
+|RNF-003|As senhas dos usuários devem ser armazenadas com algoritmos de criptografia para garantir a segurança. | ALTA |
+
+
+
+
 ## Tecnologias Utilizadas
 
 Existem muitas tecnologias diferentes que podem ser usadas para desenvolver APIs Web. A tecnologia certa para o seu projeto dependerá dos seus objetivos, dos seus clientes e dos recursos que a API deve fornecer.
+
+As técnologias utilizadas em nossa API são a linguagem de programação C#, juntamente com o Entity Framework, além de utilizar pacotes como o BCrypt.Net.Next e também o pacote Microsoft.AspNetCore.Authentication.JWTBearer para realizar os processos de encriptação e segurança.
+
 
 [Lista das tecnologias principais que serão utilizadas no projeto.]
 
