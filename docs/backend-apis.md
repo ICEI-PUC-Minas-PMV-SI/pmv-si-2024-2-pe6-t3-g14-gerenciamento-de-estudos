@@ -6,11 +6,33 @@ Aqui estão algumas etapas importantes que devem ser consideradas no planejament
 
 [Inclua uma breve descrição do projeto.]
 
+
+Criação do Projeto Inicial: Nesta fase, estruturamos a aplicação e criamos os modelos principais que representam as entidades do sistema. Adicionamos também as primeiras validações necessárias para garantir a integridade dos dados.
+
+Definição de Relacionamentos e Rotas: Após a criação dos modelos, estabelecemos os relacionamentos entre as entidades e implementamos as rotas da API, que são responsáveis pela comunicação entre o cliente e o servidor.
+
+Configuração e Testes de Banco de Dados: O banco de dados foi configurado em ambiente de teste, permitindo a execução de testes para validar as rotas implementadas. Esses testes garantem que cada funcionalidade da API esteja funcionando conforme o esperado, ajustando o desempenho e a segurança quando necessário.
+
+
 ## Objetivos da API
 
 O primeiro passo é definir os objetivos da sua API. O que você espera alcançar com ela? Você quer que ela seja usada por clientes externos ou apenas por aplicações internas? Quais são os recursos que a API deve fornecer?
 
 [Inclua os objetivos da sua api.]
+O objetivo da API é fornecer é permitir aos usuários:
+
+Criar uma conta: A API deve permitir o registro de novos usuários, armazenando suas informações, como nome, email, e credenciais de acesso. Para autenticação.
+
+Cadastrar asdisciplinas cursadas, essas disciplinas serão vinculadas ao usuário, que poderá gerenciar essas informações usando a classe Disciplina e o enum DisciplinasEnum.
+
+O usuário poderá registrar as notas que obteve em cada disciplina, com validações para garantir que os valores inseridos sejam apropriados (como no caso da classe Nota, que restringe os valores entre 0 e 10).
+
+Os principais recursos que a API fornecerá incluem:
+
+Cadastro e autenticação de usuários.
+Gerenciamento de disciplinas.
+Gerenciamento de notas.
+Essa API será desenvolvida com C# utilizando o Entity Framework e um banco de dados MySQL, com o deploy na AWS.
 
 
 ## Arquitetura
@@ -28,6 +50,7 @@ O primeiro passo é definir os objetivos da sua API. O que você espera alcança
 ## Requisitos Funcionais
 
 [Liste os principais requisitos funcionais da aplicação.]
+-
 
 ## Requisitos Não Funcionais
 
