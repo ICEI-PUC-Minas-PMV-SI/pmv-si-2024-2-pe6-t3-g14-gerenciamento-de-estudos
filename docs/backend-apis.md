@@ -76,15 +76,8 @@ A aplicação tem três entidades principais:
 - Nota: Registra as notas que os usuários obtêm nas disciplinas.
 
 2. Diagrama de Classes
-+-----------------+         +---------------------+      +---------------------+
-|     Usuario     |    1    |    Disciplina       |  *   |      Nota           |
-| - Id: int       |-------->| - Id: int           |----->| - Id: int           |
-| - Nome: string  |         | - Nome: enum        |      | - Valor: float      |
-| - Email: string |         | - UsuarioId: int    |      | - DisciplinaId: int |
-| - Senha: string |         +---------------------+      | - UsuarioId: int    |
-| + Disciplinas:  |         | + Notas:            |      +---------------------+
-|   ICollection<Disciplina> |   ICollection<Nota> |
-+-----------------+         +---------------------+
+
+   ![diagrama de classe](https://github.com/user-attachments/assets/034d21db-fd67-4d86-81c2-52aa3a8617c8)
 
 
 
@@ -99,60 +92,17 @@ Nota: Atributos como Id, Valor, DisciplinaId, e UsuarioId.
    
 Diagrama ER (Entidade-Relacionamento): Mostra como as entidades estão conectadas, ajudando a entender o banco de dados.
 Exemplo de Diagrama ER:
-+-----------------+      +---------------------+      +---------------------+
-|     Usuario     |  1  |    Disciplina        |   *  |      Nota           |
-|-----------------|----->|---------------------|----->|---------------------|
-| - Id: int       |      | - Id: int           |      | - Id: int           |
-| - Nome: string  |      | - Nome: enum        |      | - Valor: float      |
-| - Email: string |      | - UsuarioId: int    |      | - DisciplinaId: int |
-| - Senha: string |      |---------------------|      | - UsuarioId: int    |
-|                 |      | + Notas:            |      +---------------------+
-|                 |      |   ICollection<Nota> |
-+-----------------+      +---------------------+
-   
+
 Relações:
 Usuario    (1) ---- (N) Disciplina: Um usuário pode ter várias disciplinas.
 Disciplina (1) ---- (N) Nota: Uma disciplina pode ter várias notas.
+![EntidadeR](https://github.com/user-attachments/assets/bf2481b4-cab6-4902-aefd-19b542d59d5a)
 
 Fluxogramas: Representam o fluxo de processos, como a autenticação do usuário.
 
 Exemplo de Fluxograma:
 
-+-------------------+
-|  Iniciar Processo |
-+-------------------+
-          |
-          v
-+-------------------+
-| Receber Dados     |
-| (Nota, Disciplina)|
-+-------------------+
-          |
-          v
-+-------------------+
-|   Validar Dados   |
-+-------------------+
-          |
-  +-------+--------+
-  |                |
- Yes               No---------------
-  |                |               |
-  v                v               v
-+-------------------+    +-----------------------+
-| Salvar Nota       |    |     Retornar Erro     |
-| no Banco de Dados |    +-----------------------+
-+-------------------+
-          |
-          v
-+-------------------+
-| Atualizar Usuario  |
-| (se necessário)    |
-+-------------------+
-          |
-          v
-+-------------------+
-| Finalizar Processo |
-+-------------------+
+![fluxogram2](https://github.com/user-attachments/assets/799bd56f-06cf-4b0d-80a8-8d20cc6b29f1)
 
 Descrição do Fluxo:
 
@@ -167,49 +117,10 @@ Descrição do Fluxo:
 
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
-+-------------------+
-|   Início do Fluxo |
-+-------------------+
-          |
-          v
-+-------------------+
-| Receber Dados     |
-| (Nota, Disciplina)|
-+-------------------+
-          |
-          v
-+-------------------+
-| Validar Dados     |
-+-------------------+
-          |
-  +-------+--------+
-  |                |
- Sim                Não-------------
-  |                |               |
-  v                v               v
-+-------------------+    +-----------------------+
-|   Salvar Nota     |    | Retornar Erro         |
-| no Banco de Dados |    +-----------------------+
-+-------------------+
-          |
-          v
-+-------------------+
-| Atualizar Usuario  |
-| (se necessário)    |
-+-------------------+
-          |
-          v
-+-------------------+
-| Enviar Resposta   |
-| (Confirmação ou   |
-|  Erro)           |
-+-------------------+
-          |
-          v
-+-------------------+
-|    Fim do Fluxo   |
-+-------------------+
+![fluxodd1](https://github.com/user-attachments/assets/d0ef602d-e619-4afc-8e4b-87800a94909a)
+
+
+![fluxodd2](https://github.com/user-attachments/assets/2a5fb5fd-8b2d-4eb7-abb8-5b08a7090416)
 
 
 ## Requisitos Funcionais
@@ -239,37 +150,72 @@ As técnologias utilizadas em nossa API são a linguagem de programação C#, ju
 
 ## API Endpoints
 
-[Liste os principais endpoints da API, incluindo as operações disponíveis, os parâmetros esperados e as respostas retornadas.]
-
 ### Endpoint 1
 - Método: GET
-- URL: /endpoint1
+- URL: /Usuarios/{id}
 - Parâmetros:
-  - param1: [descrição]
-- Resposta:
-  - Sucesso (200 OK)
-    ```
-    {
-      "message": "Success",
-      "data": {
-        ...
-      }
-    }
-    ```
-  - Erro (4XX, 5XX)
-    ```
-    {
-      "message": "Error",
-      "error": {
-        ...
-      }
-    }
-    ```
 
+   {
+   "id":
+  }
+
+   Resposta:
+  
+   Sucesso (200 OK)
+   {
+   "nome": "Luiz",
+  "email": "luiz@hotmail.com",
+   "id": 2
+  -  }
+  - Erro (404)
+  - {
+  -"type": "https://tools.ietf.org/html/rfc9110#section-15.5.5",
+  -"title": "Not Found",
+  -"status": 404,
+  -"traceId": "00-97e1c82a67c072d0521f02683e7c523c-e0dbc3410a2e44a9-00"
+
+}
+
+### Endpoint 2
+- Método: POST
+- URL: /Notas/{id}
+- Parâmetros:
+ {
+  "valor": 9.5,
+  "disciplinaId": 1,
+  "usuarioId": 1
+}
+
+- Resposta:
+- Sucesso (201)
+- {
+  "message": "Nota criada com sucesso.",
+  "data": {
+    "id": 1,
+    "valor": 9.5,
+    "disciplinaId": 1,
+    "usuarioId": 1
+  }
+}
+
+### Endpoint 3
+- Método: DELETE
+- URL: /Notas/{id}
+- Parâmetros:
+  {
+   "id":
+  }
+- Resposta:(404)
+- {
+  "message": "Error",
+  "error": {
+    "details": "Nota não encontrada."
+  }
+}
+
+  
 
 ## Considerações de Segurança
-
-[Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
 
 Para garantir a segurança da aplicação adotamos diversas medidas de proteção, focadas em autenticação, autorização.
 
@@ -287,24 +233,113 @@ As senhas dos usuários são armazenadas de forma segura utilizando o pacote BCr
 
 ## Implantação
 
-[Instruções para implantar a aplicação distribuída em um ambiente de produção.]
+Instruções para Implantação
 
-1. Defina os requisitos de hardware e software necessários para implantar a aplicação em um ambiente de produção.
-2. Escolha uma plataforma de hospedagem adequada, como um provedor de nuvem ou um servidor dedicado.
-3. Configure o ambiente de implantação, incluindo a instalação de dependências e configuração de variáveis de ambiente.
-4. Faça o deploy da aplicação no ambiente escolhido, seguindo as instruções específicas da plataforma de hospedagem.
-5. Realize testes para garantir que a aplicação esteja funcionando corretamente no ambiente de produção.
+Requisitos:
+
+Hardware:
+
+CPU: 2 núcleos.
+RAM: 4 GB.
+Armazenamento: 20 GB.
+
+Software:
+
+Sistema Operacional: Windows ou Linux.
+Banco de Dados: MySQL ou SQL Server.
+.NET Core instalado.
+
+Escolha da Hospedagem:
+
+Plataformas como AWS ou Azure.
+
+Configuração do Ambiente:
+
+Instale dependências (.NET Core, banco de dados).
+Configure variáveis de ambiente (como strings de conexão).
+
+Deploy da Aplicação:
+
+Use ferramentas como Docker ou CI/CD para fazer o upload do código.
+
+Testes:
+
+Teste a aplicação para garantir que tudo funciona.
+Verifique o desempenho e monitore logs.
 
 ## Testes
 
-[Descreva a estratégia de teste, incluindo os tipos de teste a serem realizados (unitários, integração, carga, etc.) e as ferramentas a serem utilizadas.]
+Testes Unitários:
 
-1. Crie casos de teste para cobrir todos os requisitos funcionais e não funcionais da aplicação.
-2. Implemente testes unitários para testar unidades individuais de código, como funções e classes.
-3. Realize testes de integração para verificar a interação correta entre os componentes da aplicação.
-4. Execute testes de carga para avaliar o desempenho da aplicação sob carga significativa.
-5. Utilize ferramentas de teste adequadas, como frameworks de teste e ferramentas de automação de teste, para agilizar o processo de teste.
+Objetivo: Verificar se unidades individuais de código (funções, métodos, classes) funcionam corretamente.
+Ferramentas: xUnit ou NUnit para .NET.
+
+Caso de Teste: Criação de Usuário
+
+ID do Caso de Teste: TC001
+
+Objetivo: Verificar se um usuário pode ser criado com sucesso com dados válidos.
+
+Pré-condições:
+
+O serviço da API deve estar em execução.
+O banco de dados deve estar acessível.
+
+Dados de Entrada:
+{
+  "nome": "João Silva",
+  "email": "joao@example.com",
+  "senha": "senhaSegura123"
+}
+
+Passos:
+
+Enviar uma requisição POST para a API /api/usuarios com os dados de entrada acima.
+Resultado Esperado:
+
+A resposta deve ser um status 201 Created.
+O corpo da resposta deve conter os detalhes do usuário criado, incluindo um ID gerado.
+Pós-condições:
+
+O usuário deve ser inserido no banco de dados e deve ser possível recuperá-lo usando sua ID.
+Testes de Integração:
+
+Objetivo: Validar a interação entre diferentes componentes da aplicação, como a comunicação entre a API e o banco de dados.
+Ferramentas: Postman para testes de API.
+
+Testes de Performance:
+
+Objetivo: Medir o tempo de resposta e o desempenho geral da aplicação em diferentes cenários.
+
+Testes de Segurança:
+
+Objetivo: Identificar vulnerabilidades e garantir que a aplicação esteja protegida contra ataques comuns.
+
+
+Implementação:
+
+Criação de Casos de Teste: Desenvolver casos de teste para cada funcionalidade, cobrindo tanto requisitos funcionais quanto não funcionais.
+Execução de Testes: Automatizar a execução dos testes sempre que novas alterações forem feitas no código, usando ferramentas de CI/CD como Jenkins ou GitHub Actions.
+Relatórios:
+
+Gerar relatórios de testes para documentar resultados, identificar falhas e acompanhar a qualidade do software ao longo do tempo.
+
 
 # Referências
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+Referências
+
+Stack Overflow: Plataforma de perguntas e respostas onde diversos problemas de programação e desenvolvimento de software foram discutidos e solucionados.
+Link: stackoverflow.com
+
+ChatGPT: Modelo de linguagem da OpenAI utilizado para auxiliar na geração de textos e resolução de dúvidas técnicas.
+Link: openai.com/chatgpt
+
+Biblioteca do .NET: Documentação oficial que fornece informações sobre as funcionalidades e classes disponíveis na plataforma .NET.
+Link: .NET Documentation
+
+Balta.io: Plataforma de cursos online que oferece conteúdos voltados para desenvolvimento de software, incluindo temas relacionados a .NET e tecnologias web.
+Link: balta.io
+
+Udemy: Plataforma de aprendizado online com diversos cursos sobre programação e desenvolvimento de aplicações.
+Link: udemy.com
