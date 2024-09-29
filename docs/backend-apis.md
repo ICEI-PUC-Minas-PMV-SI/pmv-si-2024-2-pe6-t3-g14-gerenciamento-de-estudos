@@ -22,20 +22,195 @@ O usuário poderá registrar as notas que obteve em cada disciplina, com valida�
 Os principais recursos que a API fornecerá incluem:
 
 Cadastro e autenticação de usuários.
+
 Gerenciamento de disciplinas.
+
 Gerenciamento de notas.
 
 ## Arquitetura
 
-[Descrição da arquitetura das APIs, incluindo os componentes e suas interações.]
+A arquitetura das APIs do aplicativo de gerenciamento de tarefas acadêmicas é baseada em uma estrutura RESTful, facilitando a comunicação entre o cliente e o servidor. Aqui estão os principais componentes e suas interações:
+
+API RESTful: Construída com ASP.NET Core.
+
+Modelo de Dados:
+
+Usuario: Contém informações do usuário e suas disciplinas.
+
+Disciplina: Representa as matérias disponíveis.
+
+Nota: Registra as notas dos usuários em suas disciplinas.
+
+DTOs: Objetos usados para transferir dados entre a API e o cliente, garantindo que apenas as informações necessárias sejam enviadas.
+
+Dados: Utiliza Entity Framework Core para gerenciar as interações com o banco de dados.
+
+Autenticação: Implementa camadas de segurança a partir dos pacotes JWTBearer e BCrypt para garantir a segurança do usuário.
+
+Interações
+
+Requisições do Cliente: O cliente faz requisições HTTP para a API para acessar ou modificar dados.
+
+Controle de Dados: Os controladores da API processam as requisições, validam os dados e interagem com o contexto de dados para realizar operações no banco.
+
+Fluxo de Dados: Por exemplo, ao criar uma nota:
+
+O cliente envia uma requisição com os dados da nota.
+
+O controlador valida e cria uma nova nota no banco de dados.
+
+A API retorna uma resposta ao cliente confirmando a operação.
 
 ## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
+A modelagem da aplicação para o sistema de gerenciamento de tarefas envolve a estruturação dos dados e suas interações. Aqui estão os principais pontos:
+
+1. Estrutura de Dados
+ 
+A aplicação tem três entidades principais:
+
+- Usuario: Contém informações como nome, email, senha e as disciplinas que o usuário cursa.
+
+- Disciplina: Representa as matérias, vinculadas a um usuário.
+
+- Nota: Registra as notas que os usuários obtêm nas disciplinas.
+
+2. Diagrama de Classes
++-----------------+         +---------------------+      +---------------------+
+|     Usuario     |    1    |    Disciplina       |  *   |      Nota           |
+| - Id: int       |-------->| - Id: int           |----->| - Id: int           |
+| - Nome: string  |         | - Nome: enum        |      | - Valor: float      |
+| - Email: string |         | - UsuarioId: int    |      | - DisciplinaId: int |
+| - Senha: string |         +---------------------+      | - UsuarioId: int    |
+| + Disciplinas:  |         | + Notas:            |      +---------------------+
+|   ICollection<Disciplina> |   ICollection<Nota> |
++-----------------+         +---------------------+
+
+
+
+Usuario: Atributos como Id, Nome, Email, Senha, e uma lista de Disciplinas.
+
+Disciplina: Atributos como Id, Nome, UsuarioId, e uma lista de Notas.
+
+Nota: Atributos como Id, Valor, DisciplinaId, e UsuarioId.
+
+
+3. Outras Representações Visuais
+   
+Diagrama ER (Entidade-Relacionamento): Mostra como as entidades estão conectadas, ajudando a entender o banco de dados.
+Exemplo de Diagrama ER:
++-----------------+      +---------------------+      +---------------------+
+|     Usuario     |  1  |    Disciplina        |   *  |      Nota           |
+|-----------------|----->|---------------------|----->|---------------------|
+| - Id: int       |      | - Id: int           |      | - Id: int           |
+| - Nome: string  |      | - Nome: enum        |      | - Valor: float      |
+| - Email: string |      | - UsuarioId: int    |      | - DisciplinaId: int |
+| - Senha: string |      |---------------------|      | - UsuarioId: int    |
+|                 |      | + Notas:            |      +---------------------+
+|                 |      |   ICollection<Nota> |
++-----------------+      +---------------------+
+   
+Relações:
+Usuario    (1) ---- (N) Disciplina: Um usuário pode ter várias disciplinas.
+Disciplina (1) ---- (N) Nota: Uma disciplina pode ter várias notas.
+
+Fluxogramas: Representam o fluxo de processos, como a autenticação do usuário.
+
+Exemplo de Fluxograma:
+
++-------------------+
+|  Iniciar Processo |
++-------------------+
+          |
+          v
++-------------------+
+| Receber Dados     |
+| (Nota, Disciplina)|
++-------------------+
+          |
+          v
++-------------------+
+|   Validar Dados   |
++-------------------+
+          |
+  +-------+--------+
+  |                |
+ Yes               No---------------
+  |                |               |
+  v                v               v
++-------------------+    +-----------------------+
+| Salvar Nota       |    |     Retornar Erro     |
+| no Banco de Dados |    +-----------------------+
++-------------------+
+          |
+          v
++-------------------+
+| Atualizar Usuario  |
+| (se necessário)    |
++-------------------+
+          |
+          v
++-------------------+
+| Finalizar Processo |
++-------------------+
+
+Descrição do Fluxo:
+
+- Iniciar Processo: Começa a operação de criação de uma nova nota.
+- Receber Dados: Coleta as informações necessárias (nota e disciplina).
+- Validar Dados: Verifica se os dados estão corretos.
+- Se sim, continua para salvar a nota.
+- Se não, retorna um erro.
+- Salvar Nota: Armazena a nota no banco de dados.
+- Atualizar Usuario: Caso necessário atualiza informações do usuário.
+- Finalizar Processo: Conclui a operação.
 
 ## Fluxo de Dados
 
 [Diagrama ou descrição do fluxo de dados na aplicação.]
++-------------------+
+|   Início do Fluxo |
++-------------------+
+          |
+          v
++-------------------+
+| Receber Dados     |
+| (Nota, Disciplina)|
++-------------------+
+          |
+          v
++-------------------+
+| Validar Dados     |
++-------------------+
+          |
+  +-------+--------+
+  |                |
+ Sim                Não-------------
+  |                |               |
+  v                v               v
++-------------------+    +-----------------------+
+|   Salvar Nota     |    | Retornar Erro         |
+| no Banco de Dados |    +-----------------------+
++-------------------+
+          |
+          v
++-------------------+
+| Atualizar Usuario  |
+| (se necessário)    |
++-------------------+
+          |
+          v
++-------------------+
+| Enviar Resposta   |
+| (Confirmação ou   |
+|  Erro)           |
++-------------------+
+          |
+          v
++-------------------+
+|    Fim do Fluxo   |
++-------------------+
+
 
 ## Requisitos Funcionais
 
@@ -49,11 +224,11 @@ Gerenciamento de notas.
 
 ## Requisitos Não Funcionais
 
-|RNF-001|A API deve suportar até 100 usuários simultâneamente   | MÉDIO |
+|RNF-001| A API deve suportar até 100 usuários simultâneamente   | MÉDIO |
 
-|RNF-002|A API deve ser de fácil manutenção                     | ALTA |
+|RNF-002| A API deve ser de fácil manutenção                     | ALTA |
 
-|RNF-003|As senhas dos usuários devem ser armazenadas com algoritmos de criptografia para garantir a segurança. | ALTA |
+|RNF-003| As senhas dos usuários devem ser armazenadas com algoritmos de criptografia para garantir a segurança. | ALTA |
 
 
 
@@ -61,9 +236,6 @@ Gerenciamento de notas.
 ## Tecnologias Utilizadas
 
 As técnologias utilizadas em nossa API são a linguagem de programação C#, juntamente com o Entity Framework, além de utilizar pacotes como o BCrypt.Net.Next e também o pacote Microsoft.AspNetCore.Authentication.JWTBearer para realizar os processos de encriptação e segurança.
-
-
-[Lista das tecnologias principais que serão utilizadas no projeto.]
 
 ## API Endpoints
 
