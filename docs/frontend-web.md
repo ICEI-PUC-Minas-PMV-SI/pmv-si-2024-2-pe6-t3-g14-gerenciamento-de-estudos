@@ -43,7 +43,6 @@ O controlador valida e cria uma nova nota no banco de dados.
 A API retorna uma resposta ao cliente confirmando a operação.
 
 ## Projeto da Interface Web
-[Descreva o projeto da interface Web da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
 
 A interface web consiste em uma página que será construida dinamicamente com base nas interações do usuário, como exemplo: 
 
@@ -142,3 +141,13 @@ Criptografia de Senhas:
 As senhas dos usuários são armazenadas de forma segura utilizando o pacote BCrypt.Net.Next.
 
 # Referências
+
+Stack Overflow: Plataforma de perguntas e respostas onde diversos problemas de programação e desenvolvimento de software foram discutidos e solucionados. Link: stackoverflow.com
+
+ChatGPT: Modelo de linguagem da OpenAI utilizado para auxiliar na geração de textos e resolução de dúvidas técnicas. Link: openai.com/chatgpt
+
+Biblioteca do bootstrap: Documentação oficial que fornece informações sobre as funcionalidades e classes disponíveis Link: getbotstrap.com/docs/5.0/getting-started/introduction
+
+Udemy: Plataforma de aprendizado online com diversos cursos sobre programação e desenvolvimento de aplicações. Link: udemy.com
+
+Puc Minas: Plataforma da faculdade que disponibiliza conteúdo necessário para a realização da etapa. Link: https://pucminas.instructure.com/
