@@ -95,17 +95,40 @@ Durante a interação do usuário com o sistema o fluxo de dados segue por meio 
 
 ## Requisitos Funcionais
 
-[Liste os principais requisitos funcionais da aplicação.]
-RF--01
+|RF-001| Cadastro de Usuário | ALTA |
+
+|RF-002| Cadastro de Disciplina | ALTA |
+
+|RF-003| Cadastro de Tarefas | ALTA |
+
+|RF-004| Cadastro de Notas | ALTA |
+
+|RF-005| Apagar Usuários | ALTA |
+
+|RF-006| Apagar disciplinas | ALTA |
+
+|RF-007| Apagar Tarefas | ALTA |
+
+|RF-008| Apagar Notas | ALTA |
 
 ## Requisitos Não Funcionais
 
 [Liste os principais requisitos não funcionais da aplicação, como desempenho, segurança, escalabilidade, etc.]
 
+Requisitos Não Funcionais
+|RNF-001| A interface web deve suportar até 100 usuários simultâneamente | MÉDIO |
+
+|RNF-002| A interface deve ser de fácil manutenção | ALTA |
+
+|RNF-003| O layout deve ser responsivo | ALTA |
+
+|RNF-004| O layout deve ser intuitivo | ALTA |
+
 
 ## Considerações de Segurança
 
 [Discuta as considerações de segurança relevantes para a aplicação distribuída, como autenticação, autorização, proteção contra ataques, etc.]
+
 
 ## Implantação
 
