@@ -41,31 +41,62 @@ O cliente envia uma requisição com os dados da nota.
 O controlador valida e cria uma nova nota no banco de dados.
 
 A API retorna uma resposta ao cliente confirmando a operação.
-## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
 ## Projeto da Interface Web
 [Descreva o projeto da interface Web da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
 
+A interface web consiste em uma página que será construida dinamicamente com base nas interações do usuário, como exemplo: 
+
+Na página inicial teremos na lateral esquerda a lista de disciplinas do usuário.
+
+Ao topo do barra de navegação temos um ícone de usuário que permite o login e o logout.
+
+Ao centro da página temos a lista de tarefas e os espaço destinado para geração do gráfico geral do rendimento do usuário.
+
+Em páginas de cadastro temos a abertura de modais, com as informações desejadas, como na página de cadastro de disciplinas, notas e tarefas.
+
+Além disso temos a página que exibe o rendimento do aluno em uma disciplina específica, contendo uma tabela com as notas cadastradas e um gráfico comparando as notas cadastradas durante o período.
+
 ### Wireframes
-[Inclua os wireframes das páginas principais da interface, mostrando a disposição dos elementos na página.]
+
+![desktop1](https://github.com/user-attachments/assets/afeecc2e-8dae-4822-857d-3bd35e0fb40c)
+![desktop2](https://github.com/user-attachments/assets/ab68be52-b63c-484d-83ff-52923a0e9a94)
+![desktop3](https://github.com/user-attachments/assets/ff311498-3c88-4766-9056-65886b0af36a)
+![desktop4](https://github.com/user-attachments/assets/1da768ea-6d77-4bb0-88cd-fae1875af35c)
+![desktop5](https://github.com/user-attachments/assets/e3692b71-963b-42ac-8c4a-5fa4c79668be)
+![desktop6](https://github.com/user-attachments/assets/746c579b-21ef-409d-91d1-3e7f6516463a)
+
+
 
 ### Design Visual
-[Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
+
+Para o design visual optamos por utilizar a biblioteca de estilos do bootstrap, assim utilizando como padrão sua tipografia, paleta de cores, ícones entre outros elementos gráficos, além de utilizarmos a biblioteca chars js para criação de gráficos dinamicamente.
 
 ### Layout Responsivo
-[Discuta como a interface será adaptada para diferentes tamanhos de tela e dispositivos.]
+
+Utiliza a responsividade nativa do bootstrap, sendo assim o controle da responsividade é feito a partir das classes col, row, d-flex e container.
 
 ### Interações do Usuário
-[Descreva as interações do usuário na interface, como animações, transições entre páginas e outras interações.]
 
+Durante a utilização do sistema de gerenciamento de estudos o usuário vai ter as seguintes interações:
+
+Cadastro de disciplinas
+
+Cadastro de notas
+
+Cadastro de tarefas
+
+Durante esses cadastros o usuário irá preencherá um formulário em um modal que será exibido dinamicamente na tela.
+
+A transição da página login para a página principal do sistema.
 ## Fluxo de Dados
 
-[Diagrama ou descrição do fluxo de dados na aplicação.]
+Durante a interação do usuário com o sistema o fluxo de dados segue por meio das requisições HTTP em funções de Fetch API seguindo o padrão dos verbos GET, POST, PUT e DELETE na interação com o Back End e posteriormente o banco de dados.
 
 ## Requisitos Funcionais
 
 [Liste os principais requisitos funcionais da aplicação.]
+RF--01
 
 ## Requisitos Não Funcionais
 
