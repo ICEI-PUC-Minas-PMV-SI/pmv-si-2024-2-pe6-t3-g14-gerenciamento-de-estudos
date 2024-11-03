@@ -1,13 +1,21 @@
 # Front-end Web
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+O projeto envolve o desenvolvimento do front-end para garantir uma interface amigável e eficiente para os usuários interagirem com a API.
+
+Integração com a API: Implementamos a comunicação com a API através de chamadas HTTP, garantindo que as interações, como salvar ou editar disciplinas e notas, sejam realizadas de maneira rápida e eficiente, utilizando funções como fetch API. 
+
+Validações e Feedback ao Usuário: No front-end,desenvolvemos mensagens que informam ao usuário e retornam informações relevantes.
+
+Design e Responsividade: O front end conta com a responsividade nativa do bootstrap.
 
 ## Tecnologias Utilizadas
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+
+Utilizamos no projeto as tecnologias como Html, para melhorar visualmente o Bootstrap, Css para ajustes finos de estilização e para manipulação de dados utilizamos o Javascript.
 
 ## Arquitetura
 
 [Descrição da arquitetura das aplicação web, incluindo os componentes e suas interações.]
+
 
 ## Modelagem da Aplicação
 [Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
