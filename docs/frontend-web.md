@@ -14,9 +14,33 @@ Utilizamos no projeto as tecnologias como Html, para melhorar visualmente o Boot
 
 ## Arquitetura
 
-[Descrição da arquitetura das aplicação web, incluindo os componentes e suas interações.]
+A arquitetura da aplicação web do aplicativo de gerenciamento de tarefas acadêmicas é baseada em uma estrutura de Fetch API, facilitando a comunicação entre o cliente e o serviço. Aqui estão os principais componentes e suas interações:
 
+Fetch API : Construída com base nos Controllers do Back End
 
+Modelo de Dados:
+
+Usuario: Contém informações do usuário e suas disciplinas.
+
+Disciplina: Representa as matérias disponíveis.
+
+Nota: Registra as notas dos usuários em suas disciplinas.
+
+Autenticação: Implementa camadas de segurança a partir dos pacotes JWTBearer e BCrypt para garantir a segurança do usuário.
+
+Interações
+
+Requisições do Cliente: O cliente faz requisições HTTP para a API para acessar ou modificar dados.
+
+Controle de Dados: Os controladores da API processam as requisições, validam os dados e interagem com o contexto de dados para realizar operações no banco.
+
+Fluxo de Dados: Por exemplo, ao criar uma nota:
+
+O cliente envia uma requisição com os dados da nota.
+
+O controlador valida e cria uma nova nota no banco de dados.
+
+A API retorna uma resposta ao cliente confirmando a operação.
 ## Modelagem da Aplicação
 [Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
 
