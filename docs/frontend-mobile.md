@@ -76,5 +76,11 @@ Requisitos Não Funcionais
 Sendo uma aplicação que funcionará localmente no dispositivo do usuário, visamos a utilização de recursos nativos do dispositivo para segurança.
 
 # Referências
+Stack Overflow: Plataforma de perguntas e respostas onde diversos problemas de programação e desenvolvimento de software foram discutidos e solucionados. Link: stackoverflow.com
 
-Inclua todas as referências (livros, artigos, sites, etc) utilizados no desenvolvimento do trabalho.
+ChatGPT: Modelo de linguagem da OpenAI utilizado para auxiliar na geração de textos e resolução de dúvidas técnicas. Link: openai.com/chatgpt
+
+Documentação oficial do React: Fornece informações sobre as funcionalidades e classes disponíveis Link: [www](https://pt-br.legacy.reactjs.org/docs/getting-started.html)
+Udemy: Plataforma de aprendizado online com diversos cursos sobre programação e desenvolvimento de aplicações. Link: udemy.com
+
+Puc Minas: Plataforma da faculdade que disponibiliza conteúdo necessário para a realização da etapa. Link: https://pucminas.instructure.com/
