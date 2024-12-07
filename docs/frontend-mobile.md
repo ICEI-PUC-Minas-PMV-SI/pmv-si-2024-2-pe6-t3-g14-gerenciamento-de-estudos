@@ -9,11 +9,30 @@ No desenvolvimento do Front-end Móvel foram utilizadas as tecnologias React, e 
 
 ## Arquitetura
 
+A arquitetura do aplicativo de gerenciamento de tarefas acadêmicas mobile é construido com base no React para renderizar a tela, e no Sqlite para persistir os dados
 
-[Descrição da arquitetura das aplicação móvel, incluindo os componentes e suas interações.]
+Modelo de Dados:
 
-## Modelagem da Aplicação
-[Descreva a modelagem da aplicação, incluindo a estrutura de dados, diagramas de classes ou entidades, e outras representações visuais relevantes.]
+Usuario: Contém informações do usuário e suas disciplinas.
+
+Disciplina: Representa as matérias disponíveis.
+
+Nota: Registra as notas dos usuários em suas disciplinas.
+
+Dados: Utiliza Sqlite para gerenciar as interações com o banco de dados.
+
+
+Interações
+
+Requisições do Cliente: O cliente faz requisições para acessar ou modificar dados.
+
+Fluxo de Dados: Por exemplo, ao criar uma nota:
+
+O cliente envia uma requisição com os dados da nota.
+
+O controlador valida e cria uma nova nota no banco de dados.
+
+A API retorna uma resposta ao cliente confirmando a operação.
 
 ## Projeto da Interface
 [Descreva o projeto da interface móvel da aplicação, incluindo o design visual, layout das páginas, interações do usuário e outros aspectos relevantes.]
@@ -25,10 +44,12 @@ No desenvolvimento do Front-end Móvel foram utilizadas as tecnologias React, e 
 [Descreva o estilo visual da interface, incluindo paleta de cores, tipografia, ícones e outros elementos gráficos.]
 
 ### Layout Responsivo
-[Discuta como a interface será adaptada para diferentes tamanhos de tela e dispositivos.]
+
+O desenvolvimento do React utilizando responsividade nativa.
 
 ### Interações do Usuário
-[Descreva as interações do usuário na interface, como animações, transições entre páginas e outras interações.]
+
+Atravez da aplicação o usuário pode realizar cadastros, através de imputs, realizar consultas e atualizações nos dados.
 
 ## Fluxo de Dados
 
