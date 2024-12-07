@@ -1,11 +1,14 @@
 # Front-end Móvel
 
-[Inclua uma breve descrição do projeto e seus objetivos.]
+Aplicativo vem com o objetivo de auxiliar, controlar e facilitar a organização do usuário, com seus estudos e suas notas.
+Dessa forma o aplicativo foi desenvolvido com a opção de cadastro de notas e matérias, sendo assim o usuário pode lançar suas notas e acompanhar seu aproveitamento durante o período letivo.
 
 ## Tecnologias Utilizadas
-[Lista das tecnologias principais que serão utilizadas no projeto.]
+
+No desenvolvimento do Front-end Móvel foram utilizadas as tecnologias React, e para persistência dos dados o Sqlite.
 
 ## Arquitetura
+
 
 [Descrição da arquitetura das aplicação móvel, incluindo os componentes e suas interações.]
 
