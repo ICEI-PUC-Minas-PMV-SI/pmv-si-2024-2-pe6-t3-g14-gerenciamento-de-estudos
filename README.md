@@ -12,9 +12,9 @@ O projeto em desenvolvimento é uma plataforma digital voltada a auxiliar estuda
 
 ## Integrantes
 
-* Gabriela Farias Rios
+
 * Luiz Henrique Campos Rocha
-* Matheus de Sousa Cysneiros
+
 * Nikolas Augusto de Paula Batista
 * Pedro Murilo Ribeiro de Almeida
 
