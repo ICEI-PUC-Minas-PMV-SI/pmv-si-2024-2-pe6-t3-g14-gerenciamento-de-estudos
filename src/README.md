@@ -1,11 +1,6 @@
-# Instruções de utilização
+https://github.com/LuizH1359/mf-api-gerenciamento-tarefas-G14.git
 
-## Instalação do Site
+https://snack.expo.dev/@pedromurilo07/cb701b?platform=web
 
-O site em HTML/CSS/JS é um projeto estático, logo pode ser utilizado tanto em servidores...
+https://github.com/nikolasaugusto/G14front
 
-## Histórico de versões
-
-### [0.1.0] - DD/MM/AAAA
-#### Adicionado
-- Adicionado ...
